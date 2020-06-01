@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit5=07 </title>
+    <meta charset="utf-8">
+    <meta name="description" content="My webpage">
+    <meta name="keywords" content="multiplication">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="multiply.css">
+    </head>
+    <body>
+    <h1>Need help with multiplication?</h1>
+    <p>This web page will help you solve multiplication questions. All you have to do is enter the integers into the boxes below!</p>
+    <br>
+    <br>
+    <p><i>Please put the first integer you want to multiply here:</i></p>
+    <input type="text" id="numberone">
+    <br>
+    <br>
+    <p><i>Please put the second integer you want to multiply here:</i></p>
+    <input type="text" id="numbertwo"
+    <br>
+    <br>
+    <button id="solve">Submit guess</button>
+    <script>
+    let numberone;
+    let numbertwo;
+    let counter = 0;
+    let answer = 0;
+    document.getElementById("solve").addEventListener("click", myfunction);
+    function myfunction() {
+    numberone = document.getElementById("numberone").value;
+    numbertwo = document.getElementById("numbertwo").value;
+
+    while(counter < numbertwo) {
+      counter++;
+      answer = parseInt(answer) + parseInt(numberone);
+    }
+    alert("The answer is "+ answer);
+}
+    </script>
+    </body>
+</html>
